@@ -1,38 +1,244 @@
-.App {
-  text-align: center;
+.homeCard {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+@media (max-width:600px) {
+    .homeCard {
+        flex-direction: column;
+        gap: 25px;
+    }
+} 
+
+.bannerPlaceholder {
+    background: radial-gradient(black, transparent);
+    display: flex;
+    height: 65vh;
+    overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bottomCards {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    gap: 5%;
+    margin-left: 13rem;
+    margin-right: 13rem;
+    margin-bottom: 3rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media (max-width:600px) {
+    .bottomCards {
+        display: flex;
+        grid-template-columns: unset;
+        margin: 2rem;
+        flex-direction: column;
+        gap: 25px;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+footer {
+    height: 50vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    overflow: hidden;
+}
+.leftFooter {
+    width: 42%;
 }
 
-.App-link {
-  color: #61dafb;
+.rightFooter {
+    display: flex;
+    gap: 10%;
+    margin-right: 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (max-width:600px) {
+    footer {   
+        flex-direction: column;
+        padding-bottom: 5rem;
+        gap: 25px;
+    }
+    .leftFooter {
+        width: 100%;
+    }
+}
+
+.column {
+    float: left;
+    width: 25.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+}
+  
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+}
+  
+.container {
+    padding: 0 16px;
+}
+
+.butbtnton {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+  
+.butbtnton:hover {
+    background-color: #555;
+}
+
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: grey;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+.productMain {
+    display: flex;
+}
+
+.leftPart {
+    width: 25%;
+    height: 100vh;
+    margin-left: 3rem;
+    margin-right: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.rightPart {
+    width: 65%;
+    margin-right: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    gap: 35px;
+    height: 100vh;
+    overflow-y: scroll;
+    padding-bottom: 2rem;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #006CB7;
+    border-radius: 5px;
+}
+
+.product-price-filter {
+    margin-top: 2rem;
+}
+
+.product-category-filter {
+    margin-top: 2rem;
+}
+
+.product-rating-filter {
+    margin-top: 2rem;
+}
+
+.product-price-filter-checkbox {
+    display: flex;
+    gap: 12px;
+}
+.inputcheckbox {
+    width: 15px;
+    height: 15px;
+}
+
+.product-apply-filter-btn {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
 }
